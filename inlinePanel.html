@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <div id="msg"></div>
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  <script type="text/javascript">
+    var socketio = io.connect('http://localhost:8000');
+
+    function addMessage(msg) {
+      var msgArea = document.getElementById("msg");
+      var domMeg = document.createElement('div');
+      domMeg.innerHTML = msg;
+      msgArea.appendChild(domMeg);
+    }
+
+    socketio.on("connected", function(name) {});
+    socketio.on("publish", function(data) {
+      addMessage(JSON.stringify(data));
+    });
+    socketio.on("disconnect", function() {});
+  </script>
+</body>
+
+</html>

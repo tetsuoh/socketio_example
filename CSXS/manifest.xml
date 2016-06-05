@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ExtensionManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="jp.tetsuoh.socketio" ExtensionBundleName="SocketIO" ExtensionBundleVersion="1.0.0" Version="5.0">
+    <ExtensionList>
+        <Extension Id="jp.tetsuoh.socketio.extention" Version="1.0"/>
+    </ExtensionList>
+    <ExecutionEnvironment>
+        <HostList>
+            <Host Name="AEFT" Version="13.0"/>
+        </HostList>
+        <LocaleList>
+            <Locale Code="All"/>
+        </LocaleList>
+        <RequiredRuntimeList>
+            <RequiredRuntime Name="CSXS" Version="5.0"/>
+        </RequiredRuntimeList>
+    </ExecutionEnvironment>
+    <DispatchInfoList>
+        <Extension Id="jp.tetsuoh.socketio.extention">
+            <DispatchInfo>
+                <Resources>
+                    <CEFCommandLine>
+                        <Parameter>--enable-nodejs</Parameter>
+                    </CEFCommandLine>
+                    <ScriptPath>./jsx/command.jsx</ScriptPath>
+                    <MainPath>./index.html</MainPath>
+
+                </Resources>
+                <Lifecycle>
+                    <AutoVisible>true</AutoVisible>
+                </Lifecycle>
+                <UI>
+                    <Type>Panel</Type>
+                    <Menu>SocketIO</Menu>
+                    <Geometry>
+                        <Size>
+                            <Height>200</Height>
+                            <Width>200</Width>
+                        </Size>
+                    </Geometry>
+                </UI>
+            </DispatchInfo>
+        </Extension>
+    </DispatchInfoList>
+</ExtensionManifest>
